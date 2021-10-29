@@ -23,14 +23,15 @@ Node *initialize(int key)
 void initializeList(List *&L, Node *&head)
 {
 }
-// in ra màn hình danh sách liên kết
-void printList(List *L)
+// in ra màn hình một node
+void printNode(Node *p)
 {
-    for (Node *p = L->p_head; p != NULL; p = p->p_next)
-        cout << p->key << " ";
+    cout << p->key;
 }
 int main()
 {
-
+    Node *p;
+    p = initialize(5);
+    cout << p->key;
     return 0;
 }
