@@ -46,7 +46,6 @@ void hoanViKyTu(char *list, int i, int n)
 int main()
 {
     char *list = new char;
-    list = {'A', 'B'};
 
     cout << ucln(55, 44);
     return 0;
