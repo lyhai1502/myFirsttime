@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "new": "cpp",
+    "__tuple": "cpp",
+    "array": "cpp",
+    "__config": "cpp",
+    "type_traits": "cpp"
+  }
+}
