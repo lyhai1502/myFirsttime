@@ -56,9 +56,9 @@ void swap(char *x, char *y)
     *y = temp;
 }
 
-//Hoan vi cac ky tu
-// "A,B,C,D,E" -> ABCDF, ACDEB,...
-void hoanViKyTu(char *a, int left, int right)
+// Hoan vi cac ky tu
+//  "A,B,C,D,E" -> ABCDF, ACDEB,...
+void hoanViKiTy(char *a, int left, int right)
 {
     int i;
     if (left == right)
@@ -68,7 +68,7 @@ void hoanViKyTu(char *a, int left, int right)
         for (i = left; i <= right; i++)
         {
             swap((a + left), (a + i));
-            hoanViKyTu(a, left + 1, right);
+            hoanViKiTy(a, left + 1, right);
             swap((a + left), (a + i));
         }
     }
