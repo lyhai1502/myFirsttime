@@ -1,0 +1,6 @@
+Tham khảo code cũ của các bài hàng tuần
+
+Câu 3: https://thuattoan.phamvanlam.com/spoj-com-thuat-toan-bai-micemaze-mice-and-maze/
+
+
+*Em code trên Visual Studio Code

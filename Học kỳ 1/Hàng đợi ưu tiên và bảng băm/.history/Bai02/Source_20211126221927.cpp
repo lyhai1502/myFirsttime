@@ -1,0 +1,128 @@
+#include <iostream>
+#include <vector>
+#include <fstream>
+using namespace std;
+struct CongTy
+{
+    string tenCongTy;
+    string maSoThue;
+    string diaChi;
+};
+
+int charCount = 18;
+int p = 31;
+int m = 100019;
+CongTy *hashTable = new CongTy[m];
+
+long long Pow(int a, int b)
+{
+    int ans = a;
+    for (int i = 1; i < b; i++)
+        ans *= a;
+    return ans;
+}
+bool isCongTy_Empty(CongTy congTy)
+{
+    if (congTy.diaChi != "" || congTy.tenCongTy != "" || congTy.maSoThue != "")
+        return 0;
+    else
+        return 0;
+}
+// Ham bam
+long long HashString(const string &tenCongTy)
+{
+    int n = tenCongTy.length();
+    string ans = "";
+    for (int i = 0; i < charCount; i++)
+        ans += tenCongTy[n - charCount + i];
+    long long result = 0;
+    for (int i = 0; i < ans.size(); i++)
+    {
+        result += ((char)ans[i] * Pow(p, i)) % m;
+        result %= m;
+    }
+    return result;
+}
+
+// Xu ly dung do
+// void Chaining(vector<string> *&hashTable, string tenCongTy)
+// {
+//     int index = HashString(tenCongTy);
+//     hashTable[index].push_back(tenCongTy);
+// }
+
+void openAddressing(CongTy *hashTable, string tenCongTy)
+{
+    long long index = HashString(tenCongTy);
+    while (hashTable[index].tenCongTy != "")
+        index = (index + 1) % m;
+    hashTable[index].tenCongTy = tenCongTy;
+}
+CongTy initCongTy()
+{
+    CongTy congTy;
+    congTy.diaChi = "";
+    congTy.maSoThue = "";
+    congTy.tenCongTy = "";
+    return congTy;
+}
+CongTy tachChuoi(string str)
+{
+    int n = str.size();
+    CongTy congTy = initCongTy();
+    int choice = 0, save;
+    for (int i = 0; i < n; i++)
+    {
+        if (str[i] == '|')
+        {
+            choice++;
+            switch (choice)
+            {
+            case 1:
+            {
+                congTy.tenCongTy = str.substr(0, i);
+                save = i + 1;
+                break;
+            }
+            case 2:
+            {
+                congTy.maSoThue = str.substr(save, i - save);
+                congTy.diaChi = str.substr(i + 1, n);
+                break;
+            }
+            }
+        }
+    }
+    return congTy;
+}
+
+void readHashTable(CongTy *hashTable, const char *tenFile)
+{
+    ifstream ifs;
+    ifs.open(tenFile, ios::in);
+    if (!ifs.is_open())
+    {
+        cout << "\nKhong mo duoc file de doc!\n";
+        assert(false);
+    }
+    string tmp;
+    int index = 0;
+    getline(ifs, tmp, '\n');
+    while (!ifs.eof())
+    {
+        tmp = new char[255];
+        getline(ifs, tmp, '\n');
+        tmp.pop_back();
+        if (hashTable[HashString(tmp)])
+            hashTable[HashString(tmp)] = tachChuoi(tmp);
+    }
+    ifs.close();
+}
+int main()
+{
+    string s = "CONG TY CO PHAN XAY DUNG DAU TU PHAT TRIEN DI SAN SAO VIET|0315938079|30/18 Truong Sa, Phuong 17, Quan Binh Thanh, Thanh pho Ho Chi Minh";
+    cout << HashString(s) << endl;
+    // readHashTable(hashTable, "mst1.txt");
+    //cout << hashTable[1].diaChi << endl;
+    return 0;
+}

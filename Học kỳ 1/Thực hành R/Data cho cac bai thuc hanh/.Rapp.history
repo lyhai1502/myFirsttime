@@ -1,0 +1,29 @@
+benhnhan
+benhnhan <- subset(benhnhan, ages > 3)
+benhnhan
+benhnhan(1:4,-1)
+benhnhan[1:4,-1]
+benhnhan[1:4]
+benhnhan
+ages <- benhnhan$ages
+attach(benhnhan)
+ages
+benhnhan
+benhnhan <- edit(data.frame())
+benhnhan <􀀀 e d i t ( data . frame ( ))
+benhnhan <-edit( data . frame ( ))
+benhnhan <- edit(data.frame())
+benhnhan <- data.frame(ages,bloodpress)
+ages
+bloodpress
+ag <- c(1,2,3)
+ag
+benhnhan
+attach(benhnhan)
+getwd()
+benhnhan
+benhnhan <- read.table("Solieu.txt",header = TRUE)
+benhnhan
+attach(benhnhan)
+ID
+muc[ID<9] <- 1

@@ -1,0 +1,391 @@
+# Bai thuc hanh so 2 -05/10/2021#
+# Vi du: Viet ham dem so phan tu lon hon 3 cua vecto x cho truoc#
+#
+Dem <- function(x){#
+	dem = 0;#
+	n <- length(x)#
+	for(i in i:n)#
+		if(x[i] > 3) dem = dem+1#
+	return(dem)#
+}#
+#
+# Tao vecto x de kiem tra#
+	x <- sample(0:10, 20)#
+	x#
+#Kiem tra ham vua viet#
+Dem(x)
+# Bai thuc hanh so 2 -05/10/2021#
+# Vi du: Viet ham dem so phan tu lon hon 3 cua vecto x cho truoc#
+#
+Dem <- function(x){#
+	dem = 0;#
+	n <- length(x)#
+	for(i in i:n)#
+		if(x[i] > 3) dem = dem+1#
+	return(dem)#
+}#
+#
+# Tao vecto x de kiem tra#
+	x <- sample(0:10, 20, replace = TRUE)#
+	x#
+#Kiem tra ham vua viet#
+Dem(x)
+# Bai thuc hanh so 2 -05/10/2021#
+# Vi du: Viet ham dem so phan tu lon hon 3 cua vecto x cho truoc#
+#
+Dem <- function(x){#
+	dem = 0;#
+	n <- length(x)#
+	for(i in 1:n)#
+		if(x[i] > 3) dem = dem+1#
+	return(dem)#
+}#
+#
+# Tao vecto x de kiem tra#
+	x <- sample(0:10, 20, replace = TRUE)#
+	x#
+#Kiem tra ham vua viet#
+Dem(x)
+# tao 1 vecto chua n, tinh tong tich luy den vi tri i#
+#
+Tong <- function(x,i){#
+	tong = 0#
+	for(j in 1:i)#
+		tong = tong + x[i]#
+	return(tong)#
+}#
+#
+x <- sample(0:10, 20, replace = TRUE)#
+x#
+#
+Tong(x,6)
+> # tao 1 vecto chua n, tinh tong tich luy den vi tri i#
+> #
+> Tong <- function(x,i){#
++ 	tong = 0#
++ 	for(j in 1:i)#
++ 		tong = tong + x[i]#
++ 	return(tong)#
++ }#
+> #
+> x <- sample(0:10, 20, replace = TRUE)#
+> x#
+ [1]  7  6  0  8 10  1 10  5 10  3 10  2  8  7  9  8  4  4  9  1#
+> #
+> Tong(x,6)
+> # tao 1 vecto chua n, tinh tong tich luy den vi tri i#
+> #
+> Tong <- function(x,i){#
++ 	tong = 0#
++ 	for(j in 1:i)#
++ 		tong = tong + x[j]#
++ 	return(tong)#
++ }#
+> #
+> x <- sample(0:10, 20, replace = TRUE)#
+> x#
+ [ #
+> Tong(x,6)
+# tao 1 vecto chua n, tinh tong tich luy den vi tri i#
+Tong <- function(x,i){#
+	tong = 0#
+ 	for(j in 1:i)#
+ 		tong = tong + x[j]#
+ 	return(tong)#
+ }#
+ x <- sample(0:10, 20, replace = TRUE)#
+ x#
+ Tong(x,6)
+#Bai1#
+#Nhap gia tri cho n#
+n <- 40#
+# tao 1 vecto chua n, tinh tong tich luy den vi tri i #
+Tong <- function(x,i){#
+	tong = 0#
+ 	for(j in 1:i)#
+ 		tong = tong + x[j]#
+ 	return(tong)#
+ }#
+ # Tao va kiem tra vecto x#
+ x <- sample(0:100, n, replace = TRUE)#
+ # hoac x <- round(runif(n,0,10),2)#
+ #Kiem tra ham #
+ Tong(x,6)
+#Bai1#
+#Nhap gia tri cho n#
+n <- 40#
+# tao 1 vecto chua n, tinh tong tich luy den vi tri i #
+Tong <- function(x,i){#
+	tong = 0#
+ 	for(j in 1:i)#
+ 		tong = tong + x[j]#
+ 	return(tong)#
+ }#
+ # Tao va kiem tra vecto x#
+ x <- sample(0:100, n, replace = TRUE)#
+ # hoac x <- round(runif(n,0,10),2)#
+ #Kiem tra ham #
+ tong1 <- Tong(x,6)#
+ tong1
+#Bai1#
+#Nhap gia tri cho n#
+n <- 40#
+# tao 1 vecto chua n, tinh tong tich luy den vi tri i #
+Tong <- function(x,i){#
+	tong = 0#
+ 	for(j in 1:i)#
+ 		tong = tong + x[j]#
+ 	return(tong)#
+ }#
+ # Tao va kiem tra vecto x#
+ #x <- sample(0:100, n, replace = TRUE)#
+ x <- round(runif(n,0,10),2)#
+ #Kiem tra ham #
+ tong1 <- Tong(x,6)#
+ tong1
+# tinh the thich hinh cau voi ban kinh R tu 3 den 20#
+#
+#ham tinh the tich#
+Thetich <- function(){#
+	r <- 3:20#
+	v <- round(4*pi*r^3/3,3)#
+	d <- data.frame(Radius = r, Volume = v)#
+	return(d)#
+}#
+#
+Thetich()
+#Bai 3#
+# Nhap du lieu tu file data01.csv vao R#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+data01
+#Bai 3#
+# Nhap du lieu tu file data01.csv vao R#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+data01
+#Bai 3#
+# Nhap du lieu tu file data01.csv vao R#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+#
+# Tao bien va gan gia tri#
+n <- length(Age)#
+Index <- numeric(n)#
+for(i in 1:n){#
+	if(Age[i] <= 60) {Index[i] <- 0}#
+	else{#
+		if(Age[i] <=70) {Index[i] <- 1}#
+		else{#
+			if(Age[i] <= 80) {Index[i] <- 2}#
+			else{#
+				Index[i] <- 3#
+			}#
+		}#
+	}#
+#
+ans <- data.frame(Age, Index);#
+ans
+s
+#Bai 3#
+# Nhap du lieu tu file data01.csv vao R#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+#
+# Tao bien va gan gia tri#
+n <- length(Age)#
+Index <- numeric(n)#
+for(i in 1:n){#
+	if(Age[i] <= 60) {Index[i] <- 0}#
+	else{#
+		if(Age[i] <=70) {Index[i] <- 1}#
+		else{#
+			if(Age[i] <= 80) {Index[i] <- 2}#
+			else{#
+				Index[i] <- 3#
+			}#
+		}#
+	}#
+#
+ans <- data.frame(Age, Index);#
+ans
+ew
+#Bai 3#
+rm(list=ls(all=TRUE))#
+# Nhap du lieu tu file data01.csv vao R#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+#
+# Tao bien va gan gia tri#
+n <- length(Age)#
+Index <- numeric(n)#
+for(i in 1:n){#
+	if(Age[i] <= 60) {Index[i] <- 0}#
+	else{#
+		if(Age[i] <=70) {Index[i] <- 1}#
+		else{#
+			if(Age[i] <= 80) {Index[i] <- 2}#
+			else{#
+				Index[i] <- 3#
+			}#
+		}#
+	}#
+#
+ans <- data.frame(Age, Index);#
+ans
+#Bai 3#
+rm(list=ls(all=TRUE))#
+# Nhap du lieu tu file data01.csv vao R#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data01 <- read.csv("data01.csv", header = TRUE)#
+attach(data01)#
+#
+# Tao bien va gan gia tri#
+n <- length(Age)#
+Index <- numeric(n)#
+for(i in 1:n){#
+	if(Age[i] <= 60) {Index[i] <- 0}#
+	else{#
+		if(Age[i] <=70) {Index[i] <- 1}#
+		else{#
+			if(Age[i] <= 80) {Index[i] <- 2}#
+			else{#
+				Index[i] <- 3#
+			}#
+		}#
+	}#
+}#
+#
+ans <- data.frame(Age, Index);#
+ans
+rm(list=ls(all=TRUE))#
+#Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+data11
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(d){#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rowname(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data)#
+ans
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(d){#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rownames(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data)#
+ans
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(d){#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rownames(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data11)#
+ans
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(data11){#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rownames(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data11)#
+ans
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+data11
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+data11#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(d){#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rownames(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data11)#
+ans
+rm(list=ls(all=TRUE))#
+#a.Doc file data11.csv#
+setwd("/Users/lyhai1502/Library/Mobile Documents/com~apple~CloudDocs/R/BTTH R")#
+data11 <- read.csv("data11.csv", header = TRUE)#
+attach(data11)#
+data11#
+#b. Viet ham tinh cac tham so mau cho bang tan so dang khoang#
+inf.plant <- function(d){#
+	attach(d)#
+	y <- (a+b)/2#
+	x <- rep(y,n)#
+	m <- min(x) #chieu cao be nhat#
+	M <- max(x) #chieu cao lon nhat#
+	x.bar = mean(x) #trung binh mau#
+	s <- var(x) #phuong sai mau#
+	dat <- data.frame(Min = m, Max = M, Mean = x.bar, Var = s)#
+	rownames(dat) <- c(" ")#
+	return (dat)#
+}#
+ans <- inf.plant(data11)#
+ans
